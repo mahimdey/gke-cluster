@@ -1,7 +1,7 @@
 {
   "heading_all": "---------------------------------COMMON FOR ALL-------------------------------------------",
   "region": "eu-west-1",
-  "aws_account": "406633643554",
-  "vpc_id": "vpc-0048986f33647d7a6",
-  "eks_cluster_name": "ei-prod-eks-cluster"
+  "project_id": "662951040570",
+  "network": "default",
+  "eks_cluster_name": "App-dev-autopilot-cluster"
 }

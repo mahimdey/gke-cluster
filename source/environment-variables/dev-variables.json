@@ -1,6 +1,6 @@
 {
   "heading_all": "---------------------------------COMMON FOR ALL-------------------------------------------",
-  "region": "eu-west-1",
+  "region": "us-central1",
   "project_id": "662951040570",
   "network": "default",
   "eks_cluster_name": "App-dev-autopilot-cluster"

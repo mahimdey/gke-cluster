@@ -1,0 +1,13 @@
+name: PLATFORM-CREATION
+
+on: 
+    workflow_dispatch:
+      inputs:
+        Environment:
+          type: choice
+          description: 'Select Environment'
+          options:
+          - dev
+          - test
+          - preprod
+          - prod

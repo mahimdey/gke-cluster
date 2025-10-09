@@ -11,3 +11,35 @@ on:
           - test
           - preprod
           - prod
+          
+permissions:
+  id-token: write
+  contents: read
+  #pull-requests: write
+  issues: write
+  checks: write
+  actions: read
+  #security-events: write
+
+env:
+  file_path: environment-variables/${{inputs.Environment}}-variables.json
+
+jobs: 
+
+  gke-cluster-creation:
+    name: gke-cluster-creation
+    environment: ${{inputs.Environment}}
+    runs-on: ubuntu-latest
+    
+
+    steps:
+
+      - name: Configure Prerequisites for the job 
+        uses: 
+        with: 
+          role-to-assume: ${{ secrets.GCP_OIDC_ROLE_ARN }} 
+          iac-module-token: ${{secrets.IAC_MODULES_ACCESS_TOKEN}}      
+          envr: ${{inputs.Environment}}   
+    
+
+# ------------------------------------------------
